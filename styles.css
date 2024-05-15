@@ -15,6 +15,7 @@
 
 body {
     width: 100%;
+    overscroll-behavior: none;
 }
 
 header {
@@ -131,7 +132,7 @@ nav {
     color: white;
     font-family: var(--f-Josefin);
     font-weight: 300;
-    font-size: 3.5rem;
+    font-size: max(6vw, 1.5rem);
     text-transform: uppercase;
 }
 
@@ -230,6 +231,7 @@ main {
     font-size: 3rem;
     font-weight: 300;
     font-family: var(--f-Josefin);
+    text-align: center;
 }
 
 .see-all-button {
@@ -284,7 +286,7 @@ main {
     width: 100%;
     height: 100%;
     position: absolute;
-    background: rgba(0,0,0,0.4);
+    background: radial-gradient(circle at 50% 50%, transparent, rgba(0,0,0,0.9));
 }
 
 .grid-itself:hover .grid-text {
@@ -429,6 +431,7 @@ footer {
 }
 
 .footer-right > p {
+    text-align: center;
     font-weight: 400;
     font-family: var(--f-Alata);
     letter-spacing: 1px;
@@ -524,6 +527,9 @@ footer {
         background: url(./images/mobile/image-hero.jpg) no-repeat;
         background-size: cover;
         height: 100vh;
+    }
+    nav {
+        height: 150px;
     }
     header > section > div {
         width: auto;
@@ -641,5 +647,89 @@ footer {
     .creations {
         padding-bottom: 80px;
     }
-    
+}
+
+@media (max-width: 730px) {
+    header > section > div {
+        justify-content: center;
+        padding-top: 0px;
+        padding-left: 0;
+    }
+    header > section > div > h1 {
+        width: 80%;
+        font-size: 3.5rem;
+    }
+}
+
+@media (max-width: 601px) {
+    header > section > div > h1 {
+        font-size: 3rem;
+    }
+    .grid-itself {
+        height: 200px;
+    }
+    .grids > div > h1 {
+        width: 240px;
+        font-size: 2.5rem;
+        padding-left: 20px;
+        padding-bottom: 20px;
+    }
+}
+
+@media (max-width: 552px) {
+    .footer-links {
+        flex-direction: column;
+        row-gap: 20px;
+    }
+}
+
+@media (max-width: 530px) {
+    header > section > div > h1 {
+        font-size: 2.2rem;
+    }
+    header > section > div {
+        height: 200px;
+    }
+}
+
+@media (max-width: 500px) {
+    :root {
+        --all-padding-inline: 30px;
+    }
+    .menu-links {
+        padding: 70px 30px;
+    }
+}
+
+@media (max-width: 400px) {
+    :root {
+        --all-padding-inline: 20px;
+    }
+    .menu-links {
+        padding: 50px 20px;
+    }
+    .grid-itself {
+        height: 150px;
+    }
+    .grids > div > h1 {
+        width: 150px;
+        font-size: 1.5rem;
+    }
+    .creations-text-button > h1 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 350px) {
+    :root {
+        --all-padding-inline: 10px;
+    }
+    header > section > div {
+        width: auto;
+        height: auto;
+        padding-block: 20px;
+    }
+    header > section > div > h1 {
+        font-size: 1.8rem;
+    }
 }
