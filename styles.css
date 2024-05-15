@@ -197,6 +197,7 @@ main {
     display: flex;
     align-items: flex-end;
     position: relative;
+    cursor: pointer;
 }
 
 .grids > div::after {
@@ -205,6 +206,14 @@ main {
     height: 100%;
     position: absolute;
     background: rgba(0,0,0,0.4);
+}
+
+.grids > div:hover::after {
+    background: rgb(255,255,255,0.4);
+}
+
+.grids > div:hover::after .grid-text {
+    color: black;
 }
 
 .grids > div > h1 {
