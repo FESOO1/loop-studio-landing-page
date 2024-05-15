@@ -208,8 +208,8 @@ main {
     background: rgba(0,0,0,0.4);
 }
 
-.grid-itself:hover::after:has(.grid-text) {
-    border: 55px solid red;
+.grid-itself:hover::after {
+    background: rgba(255, 255, 255, 0.7);
 }
 
 .grids > div > h1 {
