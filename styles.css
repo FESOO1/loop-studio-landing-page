@@ -192,7 +192,23 @@ main {
     background-color: transparent;
 }
 
+.see-all-button2 {
+    width: 160px;
+    font-weight: 300;
+    font-family: var(--f-Alata);
+    letter-spacing: 4px;
+    border: 2px solid black;
+    cursor: pointer;
+    background-color: transparent;
+    display: none;
+}
+
 .see-all-button:hover {
+    color: white;
+    background: black;
+}
+
+.see-all-button2:hover {
     color: white;
     background: black;
 }
@@ -454,10 +470,119 @@ footer {
 }
 
 @media (max-width: 830px) {
+    header {
+        background: url(./images/mobile/image-hero.jpg) no-repeat;
+        background-size: cover;
+        height: 100vh;
+    }
+    header > section > div {
+        width: auto;
+        padding-left: 80px;
+    }
     .menu-button {
         display: unset;
     }
     .links {
         display: none;
+    }
+    main {
+        margin-top: 70px;
+    }
+    .vr-section {
+        flex-direction: column;
+        padding-bottom: 50px;
+        row-gap: 50px;
+    }
+    .vr-text {
+        width: 100%;
+        height: auto;
+        position: static;
+        padding-left: 0px;
+    }
+    .vr-text > h1 {
+        text-align: center;
+        font-size: 2rem;
+    }
+    .vr-section > img:nth-of-type(2) {
+        display: unset;
+        width: 100%;
+    }
+    .vr-section > img:nth-of-type(1) {
+        display: none;
+    }
+    header > section {
+        align-items: center;
+    }
+    .grids {
+        grid-template-columns: 1fr;
+    }
+    .grids > div:nth-of-type(1) {
+        background: url(./images/mobile/image-deep-earth.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+    
+    .grids > div:nth-of-type(2) {
+        background: url(./images/mobile/image-night-arcade.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+    
+    .grids > div:nth-of-type(3) {
+        background: url(./images/mobile/image-soccer-team.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+    
+    .grids > div:nth-of-type(4) {
+        background: url(./images/mobile/image-grid.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+    
+    .grids > div:nth-of-type(5) {
+        background: url(./images/mobile/image-from-above.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+    
+    .grids > div:nth-of-type(6) {
+        background: url(./images/mobile/image-pocket-borealis.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+    
+    .grids > div:nth-of-type(7) {
+        background: url(./images/mobile/image-curiosity.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+    
+    .grids > div:nth-of-type(8) {
+        background: url(./images/mobile/image-fisheye.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+    .grids > div > h1 {
+        width: 350px;
+        font-size: 3.5rem;
+        padding-left: 50px;
+        padding-bottom: 70px;
+    }
+    .grid-itself {
+        height: 320px;
+    }
+    .see-all-button {
+        display: none;
+    }
+    .see-all-button2 {
+        display: unset;
+        margin-top: 50px;
+        height: 55px;
+        margin-left: calc(50% - 80px);
+    }
+    .creations-text-button {
+        justify-content: center;
+        padding-bottom: 30px;
     }
 }
